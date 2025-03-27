@@ -12,6 +12,7 @@
     "@ai-sdk/openai": "^1.3.3",
     "@ai-sdk/react": "^1.2.2",
     "@cyber2024/pdf-parse-fixed": "^1.2.5",
+    "@dqbd/tiktoken": "^1.0.20",
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/themes": "^2.0.0-rc.3",
     "@types/node": "20.6.4",
@@ -35,6 +36,6 @@
   },
   "devDependencies": {
     "node-loader": "^2.0.0",
-    "typescript": "^5.9.0-dev.20250327"
+    "typescript": "^5.8.2"
   }
 }
