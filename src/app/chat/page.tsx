@@ -7,7 +7,7 @@ import {
   PaperPlaneIcon,
 } from "@radix-ui/react-icons";
 import { Button, Heading, IconButton, TextField } from "@radix-ui/themes";
-import { useChat } from "ai/react";
+import { useChat } from '@ai-sdk/react'
 import { useEffect, useRef } from "react";
 
 export default function ChatPage() {
