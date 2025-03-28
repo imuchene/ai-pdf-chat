@@ -1,3 +1,4 @@
+import { MAX_RESPONSE_TOKENS, trimMessages } from "@/lib/tokens";
 import { createOrReadVectorStoreIndex } from "@/lib/vector-store";
 import { openai } from "@ai-sdk/openai";
 import { streamText } from "ai";
@@ -32,13 +33,13 @@ export async function POST(req: Request) {
       When possible, explain the reasoning for your responses based on this knowledge.
     `;
 
-    console.log('knowledge', knowledge)
   }
 
 
   const response = streamText({
     model: openai('gpt-4o-mini'),
-    messages: messages,
+    messages: trimMessages(messages),
+    maxTokens: MAX_RESPONSE_TOKENS,
     system: systemMessage.content
   });
 
